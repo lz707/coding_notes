@@ -1,18 +1,3 @@
-class Solution1:
-    def isPalindrome(self, x: int) -> bool:
-        #convert to string
-        x = str(x)
-        ans = True
-        for i in range(len(x)):
-            if x[i] == x[-i-1]:
-                continue
-            else:
-                ans = False
-                break
-        return ans
-
-
-
 class Solution2:
     def isPalindrome(self, x: int) -> bool:
         #NOT converting to string. 
@@ -32,3 +17,17 @@ class Solution2:
             return False
         else:
             return ans
+class Solution3:
+    def isPalindrome(self, x: int) -> bool:
+        #Only reverse half of the number
+        if x < 0 or (x%10 == 0 and x!=0):
+            return False
+        
+        reverseNumber = 0
+        while reverseNumber < x:
+            reverseNumber = reverseNumber *10 + int(x % 10)
+            x = int(x/10)
+        
+
+        else:
+            return (reverseNumber == x or reverseNumber//10 == x)

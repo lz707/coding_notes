@@ -2,7 +2,7 @@ class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
     # use binary search. Twist is to find corresponding matrix item from midpint. x = mid // num_columns, y = mid % num_columns
     
-        if len(matrix) == 0 or len(matrix[0]) == 0:
+        if matrix == None or len(matrix) == 0 or len(matrix[0]) == 0:
             return False
 
         n = len(matrix)

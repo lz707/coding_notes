@@ -1,2 +1,2 @@
 # coding_notes
-My coding notes
+My coding playgraound and practice projects
